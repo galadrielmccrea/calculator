@@ -23,8 +23,8 @@ from adafruit_rgb_display import hx8357  # pylint: disable=unused-import
 
 # Configuration for CS and DC pins (these are PiTFT defaults):
 cs_pin = digitalio.DigitalInOut(board.D8)
-dc_pin = digitalio.DigitalInOut(board.D25)
-reset_pin = digitalio.DigitalInOut(board.D4)
+dc_pin = digitalio.DigitalInOut(board.D4)
+reset_pin = digitalio.DigitalInOut(board.D14)
 
 # Config for display baudrate (default max is 24mhz):
 BAUDRATE = 24000000
