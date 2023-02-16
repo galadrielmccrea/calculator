@@ -22,8 +22,8 @@ from adafruit_rgb_display import hx8357  # pylint: disable=unused-import
 #from adafruit_rgb_display import ssd1331  # pylint: disable=unused-import
 
 # Configuration for CS and DC pins (these are PiTFT defaults):
-cs_pin = digitalio.DigitalInOut(board.D8)
-dc_pin = digitalio.DigitalInOut(board.D4)
+cs_pin = digitalio.DigitalInOut(board.D4)
+dc_pin = digitalio.DigitalInOut(board.D8)
 reset_pin = digitalio.DigitalInOut(board.D17)
 
 # Config for display baudrate (default max is 24mhz):
