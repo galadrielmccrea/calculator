@@ -50,7 +50,7 @@ disp = hx8357.HX8357(spi, rotation=180,                           # 3.5" HX8357
 # disp = ssd1331.SSD1331(spi, rotation=180,                         # 0.96" SSD1331
 disp = ili9341.ILI9341(
     spi,
-    rotation=90,  # 2.2", 2.4", 2.8", 3.2" ILI9341
+    rotation=0,  # 2.2", 2.4", 2.8", 3.2" ILI9341
     cs=cs_pin,
     dc=dc_pin,
     rst=reset_pin,
