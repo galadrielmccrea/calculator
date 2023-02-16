@@ -13,6 +13,7 @@ Author(s): Melissa LeBlanc-Williams for Adafruit Industries
 
 import digitalio
 import board
+import busio
 from PIL import Image, ImageDraw
 #from adafruit_rgb_display import ili9341
 #from adafruit_rgb_display import st7789  # pylint: disable=unused-import
@@ -22,15 +23,15 @@ from adafruit_rgb_display import hx8357  # pylint: disable=unused-import
 #from adafruit_rgb_display import ssd1331  # pylint: disable=unused-import
 
 # Configuration for CS and DC pins (these are PiTFT defaults):
-cs_pin = digitalio.DigitalInOut(board.D4)
-dc_pin = digitalio.DigitalInOut(board.D8)
+cs_pin = digitalio.DigitalInOut(board.D8)
+dc_pin = digitalio.DigitalInOut(board.D4)
 reset_pin = digitalio.DigitalInOut(board.D17)
 
 # Config for display baudrate (default max is 24mhz):
 BAUDRATE = 24000000
 
 # Setup SPI bus using hardware SPI:
-spi = board.SPI()
+spi = busio.SPI(board.D11, MOSI=board.D10, MISO=board.D9)
 
 # pylint: disable=line-too-long
 # Create the display:
